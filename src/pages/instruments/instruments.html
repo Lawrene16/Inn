@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Instruments</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let instrument of instruments">
+      <ion-row>
+        <ion-col col-1>
+          <ion-icon name="{{instrument.icon.icon}}" color="{{instrument.icon.color}}"></ion-icon>
+        </ion-col>
+        <ion-col col-4 >
+            {{instrument.pair}}
+          </ion-col>
+          <ion-col col-4>
+              <b [ngStyle]="{'color': instrument.icon.tc}">{{instrument.baseprice}}</b>
+            </ion-col>
+            <ion-col col-3>
+                <b [ngStyle]="{'color': instrument.icon.tc}">{{instrument.quoteprice}}</b>
+              </ion-col>
+      </ion-row>
+  </ion-item>
+</ion-content>

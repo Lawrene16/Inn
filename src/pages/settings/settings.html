@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item-divider>Account Information</ion-item-divider>
+  <ion-item (click)="openinfopage()">{{detailstoload.details.name}}<br>{{detailstoload.details.acctnumber}}</ion-item>
+  <br>
+
+  <button (click)="logout()" ion-button block>LOGOUT</button>
+
+  <br>
+  <ion-item-divider>Settings</ion-item-divider>
+  <ion-item>
+    <ion-label>Trade opening confirmation</ion-label>
+    <ion-toggle></ion-toggle>
+  </ion-item>
+  <ion-item-divider>Confirm a trade opening</ion-item-divider>
+  <ion-item>
+      <ion-label>Show S/L and T/P settings</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Language</ion-label>
+      <ion-select [(ngModel)]="English">
+        <ion-option>English</ion-option>
+        <ion-option>Arabic</ion-option>
+        <ion-option>Hindi</ion-option>
+        <ion-option>French</ion-option>
+
+      </ion-select>
+    </ion-item>
+</ion-content>

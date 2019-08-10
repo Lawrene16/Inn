@@ -1,0 +1,127 @@
+<!--
+  Generated template for the TradesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Trades</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+      <ion-row style="padding: 10px">
+          <ion-segment mode="ios" [(ngModel)]="index">
+              <ion-segment-button value="0">
+                  Current
+              </ion-segment-button>
+              <ion-segment-button value="1">
+                  Pending
+              </ion-segment-button>
+              <ion-segment-button value="2">
+                  Closed
+              </ion-segment-button>
+          </ion-segment>
+      </ion-row>
+
+
+  <ion-card style="padding: 2px">
+    <ion-row>
+      <ion-col>
+        BALANCE<br>
+        <b>0.12</b>
+      </ion-col>
+      <ion-col>
+        EQUITY<br>
+        <b>0.12</b>
+      </ion-col>
+      <ion-col>
+        TOTAL PROFIT<br>
+        <b>0.00</b>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+        <ion-col>
+          MARGIN<br>
+          <b>0.00</b>
+        </ion-col>
+        <ion-col>
+          FREE MARGIN<br>
+          <b>0.12</b>
+        </ion-col>
+        <ion-col>
+          MARGIN LEVEL<br>
+          <b>0.00</b>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+
+  <!-- Current -->
+  <div *ngIf="index == 0" style="height: 100%; width: 100%;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p align="center"><b>You have no ongoing trades</b></p>
+  </div>
+
+
+    <!-- Pending -->
+    <div *ngIf="index == 1" style="height: 100%; width: 100%;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p align="center"><b>You have no pending orders</b></p>
+      </div>
+
+      <!-- Closed -->
+        <!-- Current -->
+  <div *ngIf="index == 2" style="height: 100%; width: 100%;">
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <b>Ticket - </b> #6567568768
+        </ion-col>
+        <ion-col>
+          <b>Type - </b> buy
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <b>Volume - </b> #6567568768
+          </ion-col>
+          <ion-col>
+            <b>S/L - </b> buy
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              <b>T/P - </b> #6567568768
+            </ion-col>
+            <ion-col>
+              <b>Symbol - </b> buy
+              </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <b>Date - </b> #6567568768
+              </ion-col>
+              <ion-col>
+                <b>Profit - </b> buy
+                </ion-col>
+            </ion-row>
+    </ion-item>
+    </div>
+</ion-content>
