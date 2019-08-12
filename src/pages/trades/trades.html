@@ -31,11 +31,11 @@
     <ion-row>
       <ion-col>
         BALANCE<br>
-        <b>0.12</b>
+        <b>{{currentbalance}}</b>
       </ion-col>
       <ion-col>
         EQUITY<br>
-        <b>0.12</b>
+        <b>{{currentbalance}}</b>
       </ion-col>
       <ion-col>
         TOTAL PROFIT<br>
@@ -50,7 +50,7 @@
         </ion-col>
         <ion-col>
           FREE MARGIN<br>
-          <b>0.12</b>
+          <b>{{currentbalance}}</b>
         </ion-col>
         <ion-col>
           MARGIN LEVEL<br>
@@ -87,31 +87,30 @@
       </div>
 
       <!-- Closed -->
-        <!-- Current -->
   <div *ngIf="index == 2" style="height: 100%; width: 100%;">
-    <ion-item>
+    <ion-item *ngFor="let trade of alltrades">
       <ion-row>
         <ion-col>
-          <b>Ticket - </b> #6567568768
+          <b>Ticket - </b> #{{trade.ticket}}
         </ion-col>
         <ion-col>
-          <b>Type - </b> buy
+          <b>Type - </b> {{trade.type}}
           </ion-col>
       </ion-row>
       <ion-row>
           <ion-col>
-            <b>Volume - </b> #6567568768
+            <b>Volume - </b> {{trade.volume}}
           </ion-col>
           <ion-col>
-            <b>S/L - </b> buy
+            <b>S/L - </b> {{trade.sl}}
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-              <b>T/P - </b> #6567568768
+              <b>T/P - </b> {{trade.tp}}
             </ion-col>
             <ion-col>
-              <b>Symbol - </b> buy
+              <b>Symbol - </b> {{trade.symbol}}
               </ion-col>
           </ion-row>
           <ion-row>

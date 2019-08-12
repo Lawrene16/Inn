@@ -50,8 +50,8 @@ export class SettingsPage {
         name: "Sifon Udo",
         acctnumber: "5303289",
         accttype: "Real Account",
-        balance: "1.3",
-        leverage: "1:100",
+        balance: "0.03",
+        leverage: "1:200",
         acctstatus: "Verified"
       }
     }
