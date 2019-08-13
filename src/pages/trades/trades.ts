@@ -70,7 +70,7 @@ export class TradesPage {
       ]
     }
   ];
-  index = "2";
+  index = "0";
   currentbalance = "";
   volumedivider;
   balances = ["0.12", "0.03"];
